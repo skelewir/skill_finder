@@ -25,8 +25,14 @@ cargo build --release
 This tool is designed to be integrated as a specialized AI Agent Skill. It is not intended for typical manual CLI usage, but rather for an agent to discover and invoke when it needs to find project-specific context.
 
 ### 1. Installation as a Skill
-
 To make this available to your AI agent, place this repository in your agent's skills directory (e.g., `~/.agents/skills/skill_finder` or the equivalent path for your agent).
+
+**Default Search Paths:**
+When searching, the tool scans for `SKILL.md` files (up to a depth of 2) in the following default directories:
+1. `~/.agents/passive_skills` (Global environment)
+2. `.agents/passive_skills` (Local project directory)
+
+Ensure that the skills you want the agent to discover are placed in one of these locations.
 
 ### 2. How the Agent Uses It
 
