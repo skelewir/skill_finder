@@ -1,24 +1,26 @@
 ---
 name: skill-finder
-description: Dynamically searches for and activates other skills based on context using vector embeddings
+description: "CRITICAL: Run this FIRST on ANY new task. Searches for and activates specialized project skills, workflows, and instructions you might need."
 license: MIT
 ---
 
 # Skill Finder
 
-Use this skill to discover and load other Agent Skills when you need capabilities you don't currently possess.
+**CRITICAL INSTRUCTION**: You MUST use this skill proactively whenever you are assigned a new task. Use it to check if there are specialized Agent Skills, project guidelines, or workflows available for your current goal. 
+
+If you are unsure how to proceed, lack context, or need new capabilities, this is the tool to use.
 
 ## Usage
 
-### 1. Search
-Search for relevant skills based on your task:
+### 1. Search (Always do this first)
+Search for relevant skills based on your current task or missing capabilities. Be descriptive in your search prompt.
 ```bash
-scripts/skill-finder search "<your_search_prompt>"
+scripts/skill-finder search "<your_task_or_missing_capability>"
 ```
 
 ### 2. Activate
-Activate the identified skills (comma-separated names):
+If the search returns relevant skills, activate them immediately using their comma-separated names:
 ```bash
 scripts/skill-finder activate "<skill_name_1>,<skill_name_2>"
 ```
-The activated skills will output their full instructions to your context.
+The activated skills will output their full instructions to your context. You must read and follow those instructions carefully before proceeding with your task.
