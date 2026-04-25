@@ -10,6 +10,10 @@ license: MIT
 
 If you are unsure how to proceed, lack context, or need new capabilities, this is the tool to use.
 
+## Available Scripts
+
+- `scripts/skill-finder.exe`: The main executable that performs local semantic search and outputs skill instructions. Use this binary for the `search` and `activate` commands.
+
 ## Usage
 
 ### 1. Search (Always do this first)
@@ -24,3 +28,4 @@ If the search returns relevant skills, activate them immediately using their com
 scripts/skill-finder activate "<skill_name_1>,<skill_name_2>"
 ```
 The activated skills will output their full instructions to your context. You must read and follow those instructions carefully before proceeding with your task.
+
