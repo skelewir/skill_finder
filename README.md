@@ -22,23 +22,19 @@ cargo build --release
 
 ## Usage
 
-This tool can be used directly or via its wrapper scripts. It provides two main commands: `search` and `activate`.
+This tool is designed to be integrated as a specialized AI Agent Skill. It is not intended for typical manual CLI usage, but rather for an agent to discover and invoke when it needs to find project-specific context.
 
-### 1. Search for Skills
+### 1. Installation as a Skill
 
-To find relevant capabilities based on a natural language description of your task:
+To make this available to your AI agent, place this repository in your agent's skills directory (e.g., `~/.agents/skills/skill_finder` or the equivalent path for your agent).
 
-```bash
-scripts/skill-finder search "<your_task_or_missing_capability>"
-```
+### 2. How the Agent Uses It
 
-### 2. Activate Skills
+When the agent evaluates its available skills, it will read the `SKILL.md` file. The instructions in `SKILL.md` explicitly mandate that the agent must use this tool proactively for any new task.
 
-Once you identify the required skills from the search results, activate them to output their full instructions:
-
-```bash
-scripts/skill-finder activate "<skill_name_1>,<skill_name_2>"
-```
+The agent will then use the provided binaries or scripts internally to:
+1. **Search**: Run a semantic query to find required skills.
+2. **Activate**: Load the instructions of the found skills into its context.
 
 ## AI Agent Instructions
 
